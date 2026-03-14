@@ -8,9 +8,18 @@ import { AssetTypesModule } from './asset-types/asset-types.module';
 import { EmployeesModule } from './employees/employees.module';
 import { FixedAssetsModule } from './fixed-assets/fixed-assets.module';
 import { DepreciationCalculationsModule } from './depreciation-calculations/depreciation-calculations.module';
+import { AccountingEntriesModule } from './accounting-entries/accounting-entries.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(typeOrmConfig()), DepartmentsModule, AssetTypesModule, EmployeesModule, FixedAssetsModule, DepreciationCalculationsModule],
+  imports: [
+    TypeOrmModule.forRoot(typeOrmConfig()),
+    DepartmentsModule,
+    AssetTypesModule,
+    EmployeesModule,
+    FixedAssetsModule,
+    DepreciationCalculationsModule,
+    AccountingEntriesModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
