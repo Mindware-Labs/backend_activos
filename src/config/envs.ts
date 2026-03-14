@@ -26,5 +26,5 @@ const envsVars: EnvVars = value;
 export const envs = {
   port: envsVars.PORT,
   database_url: envsVars.DATABASE_URL,
-  frontendUrl: envsVars.FRONTEND_URL,
+  frontendUrls: envsVars.FRONTEND_URL.split(',').map((url) => url.trim()),
 };
